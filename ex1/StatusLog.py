@@ -31,10 +31,6 @@ class StatusLog:
             		for pid in new_process:
                 		print("pid: "+str(pid))
                			status_log_file.write("pid: "+str(pid) + '\n')
-		else:
-			print('there is no new processes' + '\n')
-            		status_log_file.write('there is no new processes' + '\n')
-		print('\n')
             	status_log_file.write('\n')
 		if( not_alive_process):
          		print('processes that not alive anymore:' + '\n')
@@ -42,10 +38,6 @@ class StatusLog:
             		for pid in not_alive_process:
                 		print("pid: "+str(pid))
                 		status_log_file.write("pid: "+str(pid) + '\n')
-		else:
-			print('there is no change in the running processes' + '\n')
-            		status_log_file.write('there is no change in the running processes' + '\n')
-            	print('\n\n')
            	status_log_file.write('\n\n')
             	status_log_file.close()
 		os.chmod('Status_Log.txt', S_IREAD | S_IRGRP | S_IROTH) #readonly
